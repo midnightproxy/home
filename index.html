@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MidnightProxy · Shared Proxies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: radial-gradient(circle at 20% 30%, #0a0c14, #03050b);
+      font-family: 'Inter', sans-serif;
+      color: #eef2ff;
+    }
+    .glass-card {
+      background: rgba(15, 20, 30, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(59, 75, 255, 0.2);
+      border-radius: 20px;
+    }
+    .btn {
+      background: linear-gradient(135deg, #3b4bff, #7c3aff);
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.2s;
+    }
+    .btn:hover { transform: scale(1.02); }
+    .pricing-card {
+      background: rgba(15, 20, 30, 0.8);
+      border: 1px solid #2a3bff40;
+      border-radius: 24px;
+      padding: 32px;
+      transition: 0.2s;
+      text-align: center;
+    }
+    .pricing-card:hover { border-color: #7c3aff; transform: translateY(-4px); }
+    .feature-list li {
+      list-style: none;
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+    .feature-list li i { color: #4ade80; width: 20px; }
+    .status-badge {
+      background: #0f141f;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+    }
+    @keyframes pulse { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+    .live-badge { animation: pulse 1.5s infinite; background: #1a2a1f; color: #4ade80; }
+    .stat-card {
+      background: rgba(15, 20, 30, 0.4);
+      border: 1px solid #2a3bff20;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+    .duration {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+    .payment-box {
+      background: rgba(15, 20, 30, 0.6);
+      border: 1px solid #2a3bff40;
+      border-radius: 12px;
+      padding: 12px 20px;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .payment-box i {
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="glass-card" style="margin: 20px; padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="logo" style="height: 32px; width: auto;" alt="MidnightProxy">
+      <h2 style="font-weight: 700;">MIDNIGHT<span style="color: #7c3aff;">PROXY</span></h2>
+      <span class="status-badge live-badge"><i class="fas fa-circle" style="font-size: 10px;"></i> LIVE</span>
+    </div>
+    <div style="display: flex; gap: 28px;">
+      <a href="#plans" style="color: #eef2ff; text-decoration: none;">Plans</a>
+      <a href="#stats" style="color: #eef2ff; text-decoration: none;">Stats</a>
+      <a href="https://discord.gg/CgfFfAmNUu" style="color: #eef2ff; text-decoration: none;">Discord</a>
+    </div>
+  </nav>
+
+  <div style="max-width: 1200px; margin: 60px auto; padding: 0 24px; text-align: center;">
+    <h1 style="font-size: 4rem; font-weight: 800; background: linear-gradient(135deg, #fff, #7c3aff, #3b4bff); -webkit-background-clip: text; background-clip: text; color: transparent;">Shared Proxies</h1>
+    <p style="color: #9ca3af; margin: 20px 0; font-size: 1.2rem;">High-performance proxies for automation, scraping, and bots.<br>Updated every 5 minutes · 75%+ accuracy</p>
+    <a href="#plans" class="btn"><i class="fab fa-discord"></i> Join Discord →</a>
+  </div>
+
+  <div style="max-width: 1200px; margin: 40px auto; padding: 0 24px;" id="stats">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+      <div class="stat-card"><i class="fas fa-chart-line" style="font-size: 2rem; color: #3b4bff;"></i><br><span style="font-size: 2rem; font-weight: 800;">10k+</span><br>Checks/Min</div>
+      <div class="stat-card"><i class="fas fa-check-circle" style="font-size: 2rem; color: #4ade80;"></i><br><span style="font-size: 2rem; font-weight: 800;">75%+</span><br>Accuracy Rate</div>
+      <div class="stat-card"><i class="fas fa-sync-alt" style="font-size: 2rem; color: #7c3aff;"></i><br><span style="font-size: 2rem; font-weight: 800;">5 Min</span><br>Update Interval</div>
+    </div>
+
+    <div class="payment-box">
+      <i class="fab fa-bitcoin"></i> LTC
+      <i class="fas fa-dollar-sign"></i> USDT 
+      <i class="fab fa-alipay"></i> Alipay 
+      <i class="fab fa-weixin"></i> WeChat Pay — All accepted
+    </div>
+  </div>
+
+  <div style="max-width: 1200px; margin: 60px auto; padding: 0 24px;" id="plans">
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 2rem;">Pricing</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+      
+      <div class="pricing-card">
+        <h3>Hourly</h3>
+        <p style="color: #7c3aff; font-size: 2rem; font-weight: 800; margin: 20px 0;">$1</p>
+        <div class="duration">⏱️ 1 hour access</div>
+        <ul class="feature-list" style="margin-top: 24px;">
+          <li><i class="fas fa-check"></i> Full proxy access</li>
+          <li><i class="fas fa-check"></i> Updated every 5 min</li>
+          <li><i class="fas fa-check"></i> HTTP/HTTPS/SOCKS5</li>
+          <li><i class="fas fa-check"></i> Discord delivery</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card" style="border-color: #7c3aff;">
+        <h3>Weekly <span style="background: #7c3aff; font-size: 10px; padding: 2px 8px; border-radius: 20px;">POPULAR</span></h3>
+        <p style="color: #7c3aff; font-size: 2rem; font-weight: 800; margin: 20px 0;">$5</p>
+        <div class="duration">⏱️ 7 day access</div>
+        <ul class="feature-list" style="margin-top: 24px;">
+          <li><i class="fas fa-check"></i> Full proxy access</li>
+          <li><i class="fas fa-check"></i> Updated every 5 min</li>
+          <li><i class="fas fa-check"></i> HTTP/HTTPS/SOCKS5</li>
+          <li><i class="fas fa-check"></i> Discord delivery</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Monthly</h3>
+        <p style="color: #7c3aff; font-size: 2rem; font-weight: 800; margin: 20px 0;">$12</p>
+        <div class="duration">⏱️ 30 day access</div>
+        <ul class="feature-list" style="margin-top: 24px;">
+          <li><i class="fas fa-check"></i> Full proxy access</li>
+          <li><i class="fas fa-check"></i> Updated every 5 min</li>
+          <li><i class="fas fa-check"></i> HTTP/HTTPS/SOCKS5</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1200px; margin: 60px auto; padding: 0 24px;">
+    <div class="glass-card" style="padding: 40px; text-align: center; border-color: #4ade8040;">
+      <i class="fas fa-gift" style="font-size: 3rem; color: #4ade80;"></i>
+      <h2 style="margin: 16px 0; font-size: 1.8rem;">Free Trial</h2>
+      <p style="color: #9ca3af; margin-bottom: 16px;">1 hour of full proxy access · No payment required</p>
+      <div style="background: #0f141f; padding: 16px; border-radius: 16px; max-width: 400px; margin: 0 auto;">
+        <i class="fab fa-discord" style="color: #5865F2;"></i>
+        <span style="font-family: monospace;">https://discord.gg/CgfFfAmNUu</span>
+      </div>
+      <p style="margin-top: 20px; font-size: 0.85rem; color: #5a5f73;">
+        <i class="fas fa-check-circle" style="color: #4ade80;"></i> Requirements: Discord account older than 3 months
+      </p>
+      <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 12px;">
+        DM <span style="color: #7c3aff; font-weight: 600;">@socialwinter</span> on Discord with proof of account age
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align: center; padding: 40px; color: #5a5f73; font-size: 0.8rem;">
+    <p>© 2025 MidnightProxy · Proxies delivered via Discord</p>
+    <p style="margin-top: 10px;"><i class="fab fa-discord"></i> https://discord.gg/CgfFfAmNUu</p>
+  </div>
+</body>
+</html>
